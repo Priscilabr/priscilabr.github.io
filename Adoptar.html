@@ -1,0 +1,164 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <link href="https://fonts.googleapis.com/css2?family=Poppins&display=swap" rel="stylesheet">
+    <script src="https://kit.fontawesome.com/ca436d9cd4.js" crossorigin="anonymous"></script>
+    <link rel="stylesheet" href="style.css">
+    <title>S.O.S Felinos Tucumán</title>
+</head>
+
+<body>
+    <div class="contenedor">
+        <header class="header"> 
+
+        </header>
+        
+        <main class="contenido">
+            <p>Si te interesa adoptar a uno de nuestros gatos o gatitos, por favor, respondé estas preguntas y nos contactaremos con vos a la brevedad. ¡Gracias!</p>
+                <br>
+            <div>
+                <form name="formulario">
+                <form action="mailto:priscilalxveless@gmail.com" method="post" enctype="text/plain">
+                    
+                        <input type="text" name="nombre" size="30" maxlength="100" placeholder="Nombre">
+                        <br>
+                        <br>
+                        <input type="text" name="apellido" size="30" maxlength="100" placeholder="Apellido">
+                        <br>
+                        <br>
+                        <input type="text" name="telefono" size="30" maxlength="100" placeholder="Teléfono">
+                        <br>
+                        <br>
+                        <input type="text" name="email" size="30" maxlength="100" placeholder="Email">
+                        <br>
+                        <br>
+                        ¿Tenés otros animales en casa? 
+                        <br>
+                        
+                        <input type="radio" name="otroanimal" value="Sí"> Sí
+                        
+                        <br>
+                        
+                        <input type="radio" name="otroanimal" value="No"> No
+                        <br>
+                        <br>
+                        Nuestros rescatados se entregan en adopción con compromiso de castración, a los 7/8 meses si es macho y a los 6 meses si es hembra. <br> 
+                        Por nuestra parte, podemos colaborar con turnos gratuitos y opciones económicas (a cargo del adoptante). <br>
+                        ¿Estás dispuesto a encargarte de la castración del gato?
+                        <br>
+                        <input type="radio" name="castracion" value="Sí"> Sí
+                        
+                        <br>
+                        
+                        <input type="radio" name="castracion" value="No"> No
+                        <br>
+                        <br>
+                        ¿En dónde vivirá el gato?
+                        
+                        <br>
+                        
+                        <select name="opciones">
+                        
+                        <option value="1"> Departamento con protección en balcones y ventanas
+                        
+                        <option value="2">Departamento sin protección en balcones y ventanas
+                        
+                        <option value="3">Casa con tapia y fondo delimitados
+                        
+                        <option value="4">Casa sin tapia y fondo delimitados
+                        
+                        </select>
+                        
+                        <br>
+                        
+                        <br>
+                    
+                        En caso de no contar con protección para evitar escapes y caídas accidentales: ¿Considerarías hacer colocaciones? 
+                        <br>
+                        
+                        <input type="radio" name="colocaciones" value="Sí"> Sí
+                        
+                        <br>
+                        
+                        <input type="radio" name="colocaciones" value="No"> No
+                        <br>
+                        <br>
+                        ¿Has tenido gatos anteriormente? ¿Qué les pasó, cuántos años vivieron? Contanos. <br>
+                        También podés agregar cualquier otro dato que nos quieras hacer saber.
+                        
+                        <br>
+                        
+                        <textarea cols="30" rows="7" name="comentarios"></textarea>
+                        
+                        <br>
+                        
+                        <br>
+                        
+                        <input type="checkbox" name="recibir_info" checked> Estoy dispuesto a continuar en contacto con S.O.S Felinos por vía teléfonica y/o redes sociales. (Para hacer seguimiento de la adaptación del gato, enviar fotos, etc).
+                        
+                        <br>
+                        
+                        <br>
+                        
+                        <input type="submit" id="btn" name="btn" value="Enviar formulario">
+                        
+                        <br>
+                        
+                        <br>
+                        
+                        <input type="Reset" value="Borrar todo">
+                        
+                        </form>
+                    
+                        <script>
+                        (function() {
+                            var formulario = document.getElementsByName('formulario')[0],
+                            elementos = formulario.elements,
+                            boton = document.getElementById('btn');
+
+                            var validarNombre= function(e){
+                                if(formulario.nombre.value == 0){
+                                    alert("Debés escribir tu nombre.");
+                                    e.preventDefault();
+                                }
+                            };
+
+                            var validarRadio= function(e){
+                                if (formulario.castracion[0].checked == true ||
+                                formulario.castracion[1].checked ==true){
+
+                                } else{
+                                    alert("Debés completar el campo 'castración'.");
+                                    e.preventDefault();
+                                }
+                            };
+
+                            var validar= function(e){
+                                validarNombre(e);
+                                validarRadio(e);
+                            };
+
+                            formulario.addEventListener("submit", validar)
+
+
+                        }())
+                    
+
+                        </script>
+            </div>
+    
+        </main>
+        
+    
+        <footer class="footer">
+        </footer>
+    </div>
+    
+    <script src="script.js"></script>
+ </body>
+ 
+ </html>

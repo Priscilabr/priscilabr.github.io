@@ -1,0 +1,280 @@
+* {
+	margin: 0;
+	padding: 0;
+}
+
+body {
+	background: #E9ECF4;
+	color: #000;
+	font-family: 'Poppins', cursive;
+}
+
+.contenedor {
+	width: 90%;
+	max-width: 1000px;
+	margin: 5px auto;
+	display: grid;
+	grid-gap: 10px;
+	grid-template-columns: repeat(3, 1fr);
+	grid-template-rows: repeat(4, auto);
+
+	grid-template-areas: "header header header"
+						 "contenido contenido sidebar"
+						 "footer footer footer";
+}
+
+/* ----------------------------------------------------------------------------- */
+/* ------------------------------- CSS----------------------------------------- */
+/* ----------------------------------------------------------------------------- */
+.contenedor > div,
+.contenedor .contenido,
+.contenedor .sidebar,
+.contenedor .footer {
+	background: #fff;
+	padding: 15px;
+	border-radius: 4px;
+}
+
+
+/* ----------------------------------------------------------------------------- */
+/* ------------------------------- HEADER ----------------------------------- */
+/* ----------------------------------------------------------------------------- */
+.contenedor .header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    background: linear-gradient(to right, #e4c6c6, #e49598);  
+    color: white;
+    grid-area: header;
+	font-size: 1rem;
+    font-family: "Poppins",cursive,sans-serif;
+    min-height: 45px;
+    min-width: 400px;
+	grid-area: header;	
+}
+
+/* ---Animate CSS----*/
+
+.header-menubar li{
+	animation-name: fadeInDown; 
+	animation-duration: 2s; 
+}
+
+.header-logo {
+	display: flex;
+	position: relative;
+
+}
+
+.header-logo {
+	animation-name: fadeInDown; 
+	animation-duration: 2s; 
+
+}
+
+.contenedor .header-menubar ul {
+    margin:0 0rem;
+    padding: 0.3rem;
+    display:inline-block;
+}
+
+
+.contenedor .header-menubar li{
+    list-style: none;
+}
+
+.contenedor .header-menubar li a{
+	width:100%;
+    text-decoration: none;
+    color: rgb(255, 255, 255);
+    padding: 0rem;
+    display:inline-block;
+	
+}
+
+.contenedor .header-menubar li{
+    display: inline-block;
+	font-weight: 700;
+	font-size: 1.3rem;
+	text-align: center;
+	align-items: center;
+	margin: 0 7rem 0 0rem;
+}
+
+.contenedor .header-menubar li:hover{
+    background-color: #FFFFFF;
+	
+}
+
+.contenedor .header-menubar li a:hover{
+    color: #61a4a3;
+}
+
+
+.contenedor .header-menubar li a:hover>li{
+    color: #61a4a3;
+    display: block;
+}
+
+/* ----------------------------------------------------------------------------- */
+/* ------------------------------- CONTENIDO ----------------------------------- */
+/* ----------------------------------------------------------------------------- */
+
+.contenedor .contenido h1 {
+	text-align: center
+}
+
+.contenedor .contenido h1 {
+	color: #8cc2c0;
+}
+.contenedor .contenido p {
+	text-align: justify;
+}
+.contenedor .contenido {
+	grid-area: contenido;
+}
+
+/* ------------------------------- IFRAME ----------------------------------- */
+.contenedor .contenido iframe{
+	grid-area: contenido;
+	width: 100%;
+    min-height: 365px;
+}
+
+.contenedor .iframe{
+	display:flex;
+}
+
+.contenedor .contenido iframe{
+    border-width: 0px;
+    border-style: inset;
+    border-color: initial;
+    border-image: initial;
+}
+
+
+
+
+
+
+/* ----------------------------------------------------------------------------- */
+/* ------------------------------- SIDEBAR ----------------------------------- */
+/* ----------------------------------------------------------------------------- */
+.contenedor .sidebar {
+	grid-column: 3 / 4;
+	background: #b08a8e;
+	text-align: center;
+	display: flex;
+	align-items: center;
+	justify-content: center;
+	min-height: 100px;
+	grid-area: sidebar;
+}
+
+/* ----------------------------------------------------------------------------- */
+/* ------------------------------- FOOTER ----------------------------------- */
+/* ----------------------------------------------------------------------------- */
+.contenedor .footer {
+	background: #e49598;  
+	color: #fff;
+	grid-area: footer;
+}
+
+.contenedor .footer {
+	font-size: 0.9rem;
+    font-family: "Poppins",cursive,sans-serif;
+    box-sizing: border-box;
+    min-height: 45px;
+    margin: 0.5rem;
+    min-width: 400px;
+}
+.contenedor .footer  {
+	display: flex;
+    justify-content: space-between;
+    align-items: center;
+	top: auto;
+	width:100%;
+	margin: 0 .5rem 0 0;
+
+}
+
+.contenedor .footer a {
+	text-decoration: none;
+	font-size: larger;
+	font-weight: 400;
+	color: #fff;
+}
+
+.contenedor .footer :hover{
+    background-color: #FFFFFF;
+	
+}
+
+.contenedor .footer a:hover{
+    color: #61a4a3;
+}
+
+
+.contenedor .h.footer a:hover>li{
+    color: #61a4a3;
+    display: block;
+}
+
+/* ----------------------------------------------------------------------------- */
+/* ------------------------------- FORMULARIO ------------------------------- */
+/* ----------------------------------------------------------------------------- */
+
+
+.contenedor .contenido form{
+	font-size: 0.9rem;
+    align-content: center;
+    padding: 1rem;
+    border-style: none;
+    background-color: #b9d4db;
+}
+
+
+.form-items{
+    margin-top: 1rem;
+}
+
+.contenedor .contenido input{
+	font-family: "Poppins",cursive,sans-serif;
+}
+.contenedor .contenido select{
+	font-family: "Poppins",cursive,sans-serif;
+}
+.contenedor .contenido input.btn.btn-1{
+    padding: 1rem;
+	font-family: "Poppins",cursive,sans-serif;
+    border-style:double;
+	border-color: gray;
+    background-color:#acaaac;
+}	
+
+
+
+
+/* ----------------------------------------------------------------------------- */
+/* ------------------------------- MEDIA QUERIES ------------------------------- */
+/* ----------------------------------------------------------------------------- */
+
+
+@media screen and (max-width: 768px){
+	.contenedor {
+		grid-template-areas: "header header header"
+						 "contenido contenido contenido"
+						 "sidebar sidebar sidebar"
+						 "footer footer footer";
+	}
+}
+
+
+@media screen and (max-width: 412px){
+	.contenedor {
+		grid-template-areas: "header header header"
+						 "contenido contenido contenido"
+						 "sidebar sidebar sidebar"
+						 "footer footer footer";
+	}
+}
